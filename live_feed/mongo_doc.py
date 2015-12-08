@@ -9,7 +9,7 @@ class MongoDoc(object):
     def read_properties(self, setting_type, setting):
         parser = SafeConfigParser()
         try:
-            parser.read("application.properties")
+            parser.read("social_media.config")
             return parser.get(setting_type, setting)
         except (ConfigParser.ParsingError, ConfigParser.NoSectionError) as err:
             print "Error while reading mongo settings from file. {}".format(err)
