@@ -1,0 +1,103 @@
+body { 
+    background-color: #E6E6E6;
+    color: #555;
+    font-family: helvetica;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topbar {
+    margin: 50px auto;
+    max-width: 2600px;
+    width: 90%;
+}
+
+.topbar a {
+    float: left;
+}
+
+.topbar h1 {
+    float: right;
+}
+
+.topbar hr {
+    clear: both;
+}
+
+.wrapper {
+    margin: 50px auto;
+    max-width: 2600px;
+    min-width: 350px;
+    width: 90%;
+}
+
+.columns {
+    -moz-column-gap: 5px;
+    -webkit-column-gap: 15px;
+    column-gap: 15px;
+    -moz-column-fill: auto;
+    -webkit-column-fill: auto;
+    column-fill: auto;
+    -moz-column-width: 300px;
+    -webkit-column-width: 300px;
+    column-width: 300px;
+}
+
+.pin {
+    background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+    border: 2px solid #FAFAFA;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    display: inline-block;
+    margin: 0 2px 15px;
+    opacity: 1;
+    -moz-column-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    column-break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 15px;
+    padding-bottom: 5px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.highlight {
+    animation: yellow-fade 5s ease-in 1;
+}
+
+.pin img {
+    margin-bottom: 5px;
+    max-width: 275px;
+    padding-bottom: 15px;
+}
+
+.pin p {
+    color: #333;
+    font: 12px/18px Arial, sans-serif;
+    margin: 0;
+    max-width: 300px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.columns:hover .pin:not(:hover) {
+    opacity: 0.4;
+}
+
+.date {
+    border-bottom: 1px solid #ccc;
+    margin-top: 5px;
+    max-width: 300px;
+}
+
+hr {
+    color: #ccc;
+}
+
+@keyframes yellow-fade {
+    0% {background: #F9F0A6;}
+    100% {background: #FFF;}
+}
