@@ -20,3 +20,13 @@ def get_feed():
     if request.method == 'GET':
         if request.args.get('hub.verify_token') == "ul3livefeed":
             return request.args.get('hub.challenge')
+
+@facebook.route("api/getfeed", methods=['GET'])
+def fetch_feed():
+    fetch_param = request.args.get('lastdate')
+    print fetch_param
+    mongo_conn = MongoOP()
+    feed = mongo_conn.fetch_feed(fetch_param)
+    feed = json.dumps(feed)
+    resp = Response(feed, status=200, mimetype='application/json')
+    return resp
