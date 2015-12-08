@@ -8,7 +8,7 @@ class FacebookFeed(object):
         self.feed = fb_feed
 
     def convert_time(self, time):
-        return datetime.datetime.fromtimestamp(int(1449237434)).strftime('%Y-%m-%d %H:%M:%S')
+        return datetime.datetime.fromtimestamp(int(time)).strftime('%Y-%m-%d %H:%M:%S')
 
     def validate_key(self, feed, key):
         if feed.has_key(key):
