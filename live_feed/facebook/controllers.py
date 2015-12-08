@@ -30,3 +30,7 @@ def fetch_feed():
     feed = json.dumps(feed)
     resp = Response(feed, status=200, mimetype='application/json')
     return resp
+
+@facebook.route("home", methods=['GET'])
+def present_board():
+    return render_template('board.html')
